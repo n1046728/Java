@@ -1,4 +1,5 @@
-### Problem with 'NotifyChange' and 'Messagebox'?@NotifyChange does not work
+Problem with 'NotifyChange' and 'Messagebox'?@NotifyChange does not work
+=========================================================================
 ##### Description：see author zhvihti as below
 ##### http://forum.zkoss.org/question/80493/problem-with-notifychange-and-messagebox/
 ##### Solution：see Show Dialog 
