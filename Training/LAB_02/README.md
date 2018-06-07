@@ -1,3 +1,3 @@
-# Calculate fund data from fund.cs
+# Calculate fund data from fund.csv
 
 ## calculate mean、standard deviation、coeficient of variation
