@@ -1,4 +1,3 @@
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -7,6 +6,7 @@ public class Fund {
 	public static void main(String []args) throws FileNotFoundException{
 		File f = new File("src\\fund.csv");
 		Scanner scanner = new Scanner(f);
+		
 		
 		scanner.next();
 		
@@ -34,9 +34,7 @@ public class Fund {
 			Double cv = sd/avg;
 			
 			System.out.println(String.format("sum:%.2f avg:%.2f sd:%.2f cv:%.2f", sum,avg,sd,cv));
-			
 		}
-		
 	}
 }
 
