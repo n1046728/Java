@@ -1,13 +1,19 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 public class Fund {
-	public static void main(String []args) throws FileNotFoundException{
+	public static void main(String []args) throws FileNotFoundException, UnsupportedEncodingException{
 		File f = new File("src\\fund.csv");
-		Scanner scanner = new Scanner(f);
 		
+		//it is not working when workspace set encoding UTF-8 
+		//so we use scanner and set encode BIG5 that file is encoded by big5
 		
+		//Scanner scanner = new Scanner(f);
+		Scanner scanner = new Scanner(f,"BIG5");
+		
+		System.out.println(scanner.hasNext());
 		scanner.next();
 		
 		double avg =0; 
