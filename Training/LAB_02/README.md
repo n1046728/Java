@@ -1,4 +1,4 @@
 # Calculate fund NAV from fund.csv
 
-## calculate mean、standard deviation、coeficient of variation
+### keyword : calculate mean、standard deviation、coeficient of variation
 ### note : encodoing,scanner(f,"BIG5")
