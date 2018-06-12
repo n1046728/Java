@@ -15,6 +15,7 @@ public class WebCrawler2 {
             System.out.println(map.keySet());
             System.out.print("請輸入：");
             Scanner scanner = new Scanner(System.in);
+            //Scanner scanner = new Scanner(System.in,"UTF-8"); //IDE NetBeans
             String input = scanner.next();
             
             if(map.containsKey(input)){
