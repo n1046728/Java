@@ -8,7 +8,7 @@ public class Fund {
 		File f = new File("src\\fund.csv");
 		
 		//it is not working when workspace set encoding UTF-8 
-		//so we use scanner and set encode is BIG5 that file is encoded by big5
+		//so we use scanner and set encoding is BIG5 that file is encoded by big5
 		
 		//Scanner scanner = new Scanner(f);
 		Scanner scanner = new Scanner(f,"BIG5");
