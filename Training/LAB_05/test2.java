@@ -32,6 +32,9 @@ public class PM25Test {
         int min = Collections.min(getValuesExclude(map.values(), -1));
         int none = Collections.min(map.values());
         //System.out.println(max);
+        //homework
+        //reference https://openhome.cc/Gossip/Java/Variable-lengthArgument.html
+        //Black–Litterman model
         //排除-1,0
         //排除-1,0,1,2...
         for(String area:areas){
