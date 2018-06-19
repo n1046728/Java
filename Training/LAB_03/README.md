@@ -16,7 +16,6 @@
 
 4. google 行政院農委會JSON->食安飲食->check json ->市售米不合格->資料介接
 > gooele UBike json->使用資料->資料存取網址->更改副檔名.json  
-
 > google 行政院農委會JSON->農業旅遊->check json ->伴手禮->資料介接
 		  
 5. 自己補充：	
