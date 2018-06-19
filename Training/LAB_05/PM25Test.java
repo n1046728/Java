@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 /*
     原先在map地區與pm2.5值對映中，並未處理ND與empty的狀況，
     在原程式碼加入判別，ND與空值則存為-1，並將pm2.5存成數值，
-    以方便使用Collection找尋最大最小值，在找尋最大最小值時建立method，
+    以方便使用Collections找尋最大最小值，在找尋最大最小值時建立method，
     將-1的值排除。
     該method原本想法為移除map值回傳map但此作法並未考量map往後的使用，並不妥當，
     改為建立一arraylist並返回其值。
@@ -95,7 +95,7 @@ public class PM25Test {
         }
         System.out.println("newlist"+newlist);
         
-//JAVA 8 Stream寫法
+        //JAVA 8 Stream寫法
         List<Integer> newlist2 =  list.stream().filter(item->!Arrays.asList(numbers).contains(item)).collect(Collectors.toList());
         System.out.println("newlist2"+newlist2);
         
