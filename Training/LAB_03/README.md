@@ -1,6 +1,6 @@
 # JSON
 1. Introducing JSON: www.json.org
- > select java->google-gson
+ > select java->google-gson  
  > 傳輸F.F(flate file)純文字->xml->json		
 		  
 2. add gson.jar
