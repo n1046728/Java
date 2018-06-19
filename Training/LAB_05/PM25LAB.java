@@ -3,7 +3,9 @@ import java.util.HashMap;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-
+/*------------------------------------------------
+    建立static區域將地區與對映的pm2.5值存入map以供查找
+-------------------------------------------------*/
 public class PM25LAB {
     public static HashMap<String,Integer> pm25Map=new HashMap<>();
     
