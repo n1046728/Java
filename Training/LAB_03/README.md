@@ -1,11 +1,11 @@
 # JSON
 1. Introducing JSON: www.json.org
-	 select java->google-gson
-	 傳輸F.F(flate file)純文字->xml->json		
+#### select java->google-gson
+#### 傳輸F.F(flate file)純文字->xml->json		
 		  
 2. add gson.jar
-	 right-clicking on the Project → Build Path → Configure Build Path. Under Libraries tab, 
-	 click Add Jars or Add External JARs and give the Jar.
+> right-clicking on the Project → Build Path → Configure Build Path. Under Libraries tab, 
+> click Add Jars or Add External JARs and give the Jar.
 		 	
 3. 天氣數據openweathermap.org
 	 search taipei  
