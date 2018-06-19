@@ -20,7 +20,7 @@ public class WebCrawler2 {
             
             if(map.containsKey(input)){
             	System.out.println("find pm2.5中...請稍候");
-                System.out.println(input+"現在的PM2.5即時濃度為："+doc.select("#"+map.get(input)).text());
+                System.out.println(input+"現在的PM2.5即時濃度為："+doc.select(map.get(input)).text());
                 System.out.println();
             }else{
             	System.out.println("離開...");
@@ -35,12 +35,13 @@ public class WebCrawler2 {
         Document doc = Jsoup.connect("https://taqm.epa.gov.tw/pm25/tw/PM25A.aspx?area=10").get();
         for(int i =2;i<=99;i++){
         	//area css_id
+            //find location id and pm25 value id difference 
             //<a id="ctl08_gv_ctl02_linkSite" href="http://taqm.epa.gov.tw/taqm/tw/Site/Keelung.aspx" target="_blank">基隆</a>
             String text = doc.select("#ctl08_gv_ctl"+String.format("%02d", i)+"_linkSite").text();
             if(!text.isEmpty()){
             	//pm2.5 value
             	//<span id="ctl08_gv_ctl02_lab1">26</span>
-                map.put(text,"ctl08_gv_ctl"+String.format("%02d", i)+"_lab1");
+                map.put(text,"#ctl08_gv_ctl"+String.format("%02d", i)+"_lab1");
             }     
         }
         return map;
