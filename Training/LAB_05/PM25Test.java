@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
+
 /*
     原先在map地區與pm2.5值對映中，並未處理ND與empty的狀況，
     在原程式碼加入判別，ND與空值則存為-1，並將pm2.5存成數值，
@@ -46,9 +48,8 @@ public class PM25Test {
         //-1為空值或ND，直接使用Collections.min找出來的為-1
         int none = Collections.min(map.values());
         //System.out.println(max);
-        //Homework多排除值後的最小值
-        int excludeMin=Collections.min(getValuesExclude2(map.values(), -1,2,3));
         //從最小值及最大值反推地區
+        int excludeMin=Collections.min(getValuesExclude2(map.values(), -1,2,3));
         for(String area:areas){
             if(map.get(area)== max){
                 System.out.println("max area : "+area+"pm25:"+max);
@@ -86,12 +87,18 @@ public class PM25Test {
 //        for(int number:numbers){
 //            System.out.print(number+" ");
 //        }
+        //傳統寫法
         for(int value :list){
             if(!Arrays.asList(numbers).contains(value)){
                 newlist.add(value);
             }
         }
-//        System.out.println("newlist"+newlist);
+        System.out.println("newlist"+newlist);
+        
+//JAVA 8 Stream寫法
+        List<Integer> newlist2 =  list.stream().filter(item->!Arrays.asList(numbers).contains(item)).collect(Collectors.toList());
+        System.out.println("newlist2"+newlist2);
+        
         return newlist;
     }
 }
