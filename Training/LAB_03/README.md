@@ -1,4 +1,5 @@
 # JSON
+#### 20180601
 1. Introducing JSON: www.json.org
  > select java->google-gson  
  > 傳輸F.F(flate file)純文字->xml->json		
