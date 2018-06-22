@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 //reference https://stackoverflow.com/questions/7080205/popup-message-boxes
 public class Test {
     public static void main(String[] args) throws IOException, InterruptedException{
-        Document doc = Jsoup.connect("http://bonddealerbook.pixnet.net/blog").get();
+        Document doc = Jsoup.connect("http://......").get();
             //System.out.println(doc.select("h2 a"));
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Elements titles = doc.getElementsByTag("h2");
