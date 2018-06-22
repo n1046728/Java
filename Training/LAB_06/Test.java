@@ -8,7 +8,7 @@ import org.jsoup.select.Elements;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
-
+//reference https://stackoverflow.com/questions/7080205/popup-message-boxes
 public class Test {
     public static void main(String[] args) throws IOException, InterruptedException{
         Document doc = Jsoup.connect("http://bonddealerbook.pixnet.net/blog").get();
