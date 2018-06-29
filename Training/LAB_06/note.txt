@@ -38,3 +38,36 @@ public class Transaction {
         return instance;
     }
 }
+
+
+import java.util.Date;
+
+public class Transaction {
+//    private static Transaction instance = new Transaction();
+//    private static Transaction instance2 = new Transaction();
+    private static int poolSize=10;
+    private static Transaction[]instance=new Transaction[poolSize];
+    
+    static{
+        for(int i =0;i<poolSize;i++){
+            instance[i] = new Transaction();
+        }
+    }
+    private Transaction(){
+        System.out.println("create Transaction() object");
+    }
+    public void submit(int money){
+        System.out.println("交易金額："+money);
+    }
+    //singllton
+    public  static final Transaction getTransaction(){
+//        if(new Date().getTime()%2 ==0){
+//            return instance;
+//        }else{
+//            return instance2;
+//        }
+        int idx = (int)(new Date().getTime()%poolSize);
+        return instance[idx];
+        
+    }
+}
