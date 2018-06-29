@@ -1,0 +1,40 @@
+
+
+public class Main {
+    public static void main(String[] args) {
+        //transaction 為厚重的物件，一次可能佔memory 10MB
+        //基於這樣的理由，讓
+//        Transaction t1 = new Transaction();
+//        t1.submit(10000);
+//        Transaction t2 = new Transaction();
+//        t2.submit(20000);
+        Transaction t1 = Transaction.getTransaction();
+        t1.submit(10000);
+        Transaction t2 = Transaction.getTransaction();
+        t2.submit(500);
+        Transaction t3 = Transaction.getTransaction();
+        t2.submit(1000);
+        //......
+        //=>讓t2也指向t1，但有什麼方法可以只new 一次
+        //1.private 建構子...X
+        //2.
+    }
+}
+
+
+
+
+
+public class Transaction {
+    private static Transaction instance = new Transaction();
+    private Transaction(){
+        System.out.println("create Transaction() object");
+    }
+    public void submit(int money){
+        System.out.println("交易金額："+money);
+    }
+    //singllton
+    public  static final Transaction getTransaction(){
+        return instance;
+    }
+}
