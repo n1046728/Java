@@ -1,0 +1,47 @@
+
+public class StockBean {
+	private String stkCode;
+	private String stkName;
+	private String type;
+	private String Exchange;
+	
+	
+	public StockBean(){}
+	public StockBean(String stkCode, String stkName, String type, String exchange) {
+		super();
+		this.stkCode = stkCode;
+		this.stkName = stkName;
+		this.type = type;
+		Exchange = exchange;
+	}
+
+
+	public String getStkCode() {
+		return stkCode;
+	}
+	public void setStkCode(String stkCode) {
+		this.stkCode = stkCode;
+	}
+	public String getStkName() {
+		return stkName;
+	}
+	public void setStkName(String stkName) {
+		this.stkName = stkName;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getExchange() {
+		return Exchange;
+	}
+	public void setExchange(String exchange) {
+		Exchange = exchange;
+	}
+	
+	
+	
+	
+}
