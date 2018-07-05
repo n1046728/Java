@@ -1,0 +1,103 @@
+<?page title="JDBC_Test"?>
+<window border="normal" width="800px" viewModel="@id('vm')@init('JDBCTestVM')" style="margin:0px auto;">
+	<vlayout>	
+		<label value="JDBC_READ" style="color:blue; text-decoration:underline; font-weight:bold;"/>
+		<separator spacing="10px"/>
+		<listbox vflex="true" hflex="1"
+	            model="@load(vm.stkList)"  >
+	            <!--  <auxhead>
+	                <auxheader colspan="4" >Stock List</auxheader>
+	            </auxhead>
+	            -->
+	            <listhead>
+	                <listheader label="StokeCode"  />
+	                <listheader label="StockName"  />
+	                <listheader label="Type"  />
+	                <listheader label="Exchange"  />
+	            </listhead>
+	            <template name="model" var="x">
+	                <listitem>
+	                    <listcell label="@load(x.stkCode)" />
+	                    <listcell label="@load(x.stkName)" />
+	                    <listcell label="@load(x.type)" />
+	                    <listcell label="@load(x.exchange)" />
+	                </listitem>
+	            </template>
+	        </listbox>
+	</vlayout>
+	<separator spacing="40px"/>
+	<label value="JDBC_CREATE" style="color:blue; text-decoration:underline; font-weight:bold;"/>
+	<separator spacing="20px"/>
+	<vlayout>
+        <grid>
+        	<columns>
+        		<column>Name</column>
+        		<column>Content</column>
+        	</columns>
+        	<rows>
+        		<row>
+        			<label value="StkCode"/>
+        			<textbox value="@bind(vm.stkObject.stkCode)"/>
+        		</row>
+        		<row>
+        			<label value="StkName"/>
+        			<textbox value="@bind(vm.stkObject.stkName)"/>
+        		</row>
+        		<row>
+        			<label value="Type"/>
+        			<textbox value="@bind(vm.stkObject.type)"/>
+        		</row>
+        		<row>
+        			<label value="Exchange"/>
+        			<textbox value="@bind(vm.stkObject.exchange)"/>
+        		</row>
+        	</rows>
+        </grid>
+        <hbox>
+        	<button label="save" onClick="@command('add')"/>
+        	<button label="clear" onClick="@command('clear',stkobj=vm.stkObject)"/>
+        </hbox>	
+	</vlayout>
+	<separator spacing="40px"/>
+	<label value="JDBC_UPDATE_DELETE" style="color:blue; text-decoration:underline; font-weight:bold;"/>
+	<separator spacing="20px"/>
+	<hbox>
+		<label>請輸入要修改的股票代號：</label>
+		<textbox value="@bind(vm.stkCode)"/>
+		<button label="Query" onClick="@command('query')"/>
+		<button label="Clear" onClick="@command('clear',stkobj=vm.stkUpdateObject)"/>
+ 	</hbox>
+ 	<separator spacing="20px"/>
+ 	<vlayout>
+		<grid>
+		   	<columns>
+		   		<column>Name</column>
+		   		<column>Content</column>
+		   	</columns>
+		   	<rows>
+		   		<row>
+		   			<label value="StkCode"/>
+		   			<textbox value="@bind(vm.stkUpdateObject.stkCode)"/>
+		   		</row>
+		   		<row>
+		   			<label value="StkName"/>
+		   			<textbox value="@bind(vm.stkUpdateObject.stkName)"/>
+		   		</row>
+		   		<row>
+		   			<label value="Type"/>
+		   			<textbox value="@bind(vm.stkUpdateObject.type)"/>
+		   		</row>
+		   		<row>
+		   			<label value="Exchange"/>
+		   			<textbox value="@bind(vm.stkUpdateObject.exchange)"/>
+		   		</row>		  	   			
+			</rows>	
+		</grid>
+		<hbox>
+			<button label="update" onClick="@command('save')"/>
+		   	<button label="delete" onClick="@command('delete')"/>
+		</hbox>
+	</vlayout>
+	
+	
+</window>
