@@ -1,0 +1,108 @@
+package p0706;
+//SAM (Single Abstract Method),只有一個抽樣方法，這樣lambda才能使用
+public interface Calc {
+   double result(double x,double y);
+   //interface 實作，大家要用一樣的
+   default void copyright(){
+       System.out.println("test1");
+   }
+}
+
+
+package p0706;
+
+public class Test {
+    public static void main(String []args){
+        Calc add = new CalcAdd();
+        System.out.println(add.result(2, 3));
+        Calc bmi = new CalcBMI();
+        System.out.printf("%.2f\n" ,bmi.result(60, 170));
+    }
+}
+class CalcAdd implements Calc{
+
+    @Override
+    public double result(double x, double y) {
+        return x+y;
+    }
+}
+class CalcBMI implements Calc{
+
+    @Override
+    public double result(double w, double h) {
+        return w/Math.pow(h/100, 2);
+    }
+}
+
+
+
+package p0706;
+public class Test2 {
+    public static void main(String[] args) {
+        //匿名內部類別
+        Calc add = new Calc() {
+            @Override
+            public double result(double x, double y) {
+                return x+y;
+            }
+        };
+        Calc bmi = new Calc() {
+            @Override
+            public double result(double w, double h) {
+                return w/Math.pow(h/100, 2);
+            }
+        };
+     
+        System.out.println(add.result(2, 3));
+        System.out.printf("%.2f\n" ,bmi.result(60, 170));
+    }
+}
+
+
+package p0706;
+public class Test3 {
+    public static void main(String[] args) {
+        //JAVA old
+        Calc add = new Calc() {
+            @Override
+            public double result(double x, double y) {
+                return x+y;
+            }
+        };
+        System.out.println(add.result(2, 3));
+        
+        //JAVA8 lambda
+        Calc add2 = (double x, double y) -> x+y;
+        System.out.println(add2.result(2, 3));
+        
+        Calc multi = ( x, y)->x*y; //型態可不寫因為已在interface 定義
+        System.out.println(multi.result(2, 3));
+        
+        //bmi
+        Calc bmi = (w,h)->w/Math.pow(h/100, 2);
+        System.out.printf("%.2f\n",bmi.result(60, 170));
+        
+        //多行
+        Calc bmi2 = ((w, h) -> {
+            double value =w/Math.pow(h/100, 2);
+            return value; //To change body of generated lambdas, choose Tools | Templates.
+        });
+        
+        //求max,min
+        //Calc max
+        //Calc min
+        Calc max =((x, y) -> {
+            
+            if(x>y){
+                return x;
+            }else{
+                return y;
+            }          
+        });
+        Calc min=(x, y)->(x<y)?x:y;
+        System.out.println(max.result(20, 30));
+        System.out.println(min.result(20, 30));
+    }
+}
+
+
