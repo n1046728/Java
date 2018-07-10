@@ -1,0 +1,159 @@
+package p0713;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+public class StreamTest {
+    public static void main(String []args) throws FileNotFoundException{
+//        List<String> names = Arrays.asList("john","lee","james");
+//        for(String name:names){
+//            System.out.println(name);
+//        }
+//        System.out.println();
+//        
+//        names.forEach(s->System.out.println(s));
+        //Stream
+//        System.out.println();
+//        names.stream().filter(s->s.startsWith("l")).forEach(s->System.out.println(s));
+//        names.stream().map(s->s.toUpperCase()).forEach(s->System.out.println(s));
+//        names.stream().filter(s->s.contains("o")).map(s->s.toUpperCase()).forEach(System.out::println);
+//        List<String> name2 = names.stream().filter(s->s.contains("o")).map(s->s.toUpperCase()).collect(Collectors.toList());
+        //System.out.println(name2);
+        //Integer
+        //IntStream.rangeClosed(0, 10).forEach(System.out::println);
+        List<Integer> list =IntStream.rangeClosed(1, 10).boxed().collect(Collectors.toList());
+        List<Integer>list2 = list.stream().filter(s->s%2==0).collect(Collectors.toList());
+        List<Integer>list3 = IntStream.rangeClosed(1,100).filter(s->s%2==0).boxed().collect(Collectors.toList());
+        list3.forEach(System.out::println);
+        System.out.println(Stream.of(1,2,2,3,3,4).collect(Collectors.toSet()));
+        List<Integer> listAsc = Stream.of(9,6,31,10,1,2).sorted().collect(Collectors.toList());
+        List<Integer> listDesc = Stream.of(9,6,31,10,1,2).sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+        System.out.println(listAsc);
+        System.out.println(listDesc);
+//        File file = new File("src//MI_INDEX.csv");
+//	Scanner sc = new Scanner(file);
+//        System.out.println(sc.hasNextLine());
+
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+        List<Integer> twoEvenSquares = 
+            numbers.stream()
+                   .filter(n -> {
+                            System.out.println("filtering " + n); 
+                            return n % 2 == 0;
+                          })
+                   .map(n -> {
+                            System.out.println("mapping " + n);
+                            return n * n;
+                          })
+                   .collect(Collectors.toList());
+        twoEvenSquares.forEach(System.out::println);
+    }
+}
+
+
+package p0713;
+
+public class ETF {
+    private String stkCode;
+    private String stkName;
+    private int volumne;
+    private double closedPrice;
+
+    public ETF(String stkCode, String stkName, int volumne, double closedPrice) {
+        this.stkCode = stkCode;
+        this.stkName = stkName;
+        this.volumne = volumne;
+        this.closedPrice = closedPrice;
+    }
+
+    
+    public String getStkCode() {
+        return stkCode;
+    }
+
+    public void setStkCode(String stkCode) {
+        this.stkCode = stkCode;
+    }
+
+    public String getStkName() {
+        return stkName;
+    }
+
+    public void setStkName(String stkName) {
+        this.stkName = stkName;
+    }
+
+    public int getVolumne() {
+        return volumne;
+    }
+
+    public void setVolumne(int volumne) {
+        this.volumne = volumne;
+    }
+
+    public double getClosedPrice() {
+        return closedPrice;
+    }
+
+    public void setClosedPrice(double closedPrice) {
+        this.closedPrice = closedPrice;
+    }
+    
+    
+    
+}
+
+
+
+package p0713;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+public class ETFTest {
+    public static void main(String[]args) throws FileNotFoundException{
+        File file = new File("src//MI_INDEX.csv");
+        Scanner sc = new Scanner(file,"MS950");
+        System.out.println(sc.hasNext());
+        List<ETF> etfs = new ArrayList();
+        while(sc.hasNext()){
+            String [] data = sc.next().split("\",\"");
+            //System.out.println(data.length);
+            if(data[0].startsWith("=")&&data.length==16){
+//                System.out.println(data[0].replace("=\"","") +"\t"+data[1]+
+//                                    "\t"+Integer.parseInt(data[2].replace(",", ""))+"\t"+Double.parseDouble(data[8]));
+                ETF etf = new ETF(data[0].replace("=\"",""),
+                                  data[1],
+                                  Integer.parseInt(data[2].replace(",", "")),
+                                  Double.parseDouble(data[8]));
+                etfs.add(etf);
+            }
+            //ETF etf = new ETF(data[0],data[1],data[2],data[8])
+        }
+        //System.out.println(etfs.size());
+        //etfs.forEach(e -> System.out.println(e.getStkCode() +"\t" +e.getStkName()));
+        List<ETF> list = etfs.stream().map(e->{e.setVolumne(e.getVolumne()/1000);
+                                               return e;}).collect(Collectors.toList());
+        //list.forEach(e->System.out.println(e.getStkName()+"\t成交張數:"+e.getVolumne()));
+        etfs.stream().filter(s->s.getClosedPrice()>50).forEach(s->System.out.println(s.getStkName()+"\t"+s.getClosedPrice()));
+        double max = etfs.stream().mapToDouble(s->s.getVolumne()*s.getClosedPrice()).max().getAsDouble();
+        double sum = etfs.stream().mapToDouble(s->s.getVolumne()*s.getClosedPrice()).sum();
+        System.out.println(max);
+        System.out.println(sum);
+    
+        etfs.stream().filter(s->s.getClosedPrice()*s.getVolumne() == max).forEach(s->System.out.println(s.getStkName()));
+       
+    }    
+}
