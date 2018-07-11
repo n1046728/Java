@@ -1,0 +1,63 @@
+package p0713_2;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+import static java.util.stream.Collectors.summingInt;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+import static java.util.stream.StreamSupport.intStream;
+
+public class StreamTest {
+    public static void main(String []args){
+        //lambda express foreach
+        List<String> names = Arrays.asList("tom","james","vivian","joe");
+//        for(String name : names){
+//            System.out.println(name);
+//        }
+        //names.forEach(s->System.out.println(s));
+        //names.forEach(System.out::println);
+        //System.out.println("james".startsWith("j"));
+        
+        //String List filter map collect
+        //names.stream().filter(s->s.startsWith("j")).forEach(System.out :: println);
+        //names.stream().map(s->s.toUpperCase()).forEach(System.out::println);
+        //names.stream().mapToInt(s->s.length()).boxed().forEach(System.out::println);
+        //List<Integer> len = names.stream().map(s->s.length()).collect(Collectors.toList());
+        //List<String> names2 = names.stream().filter(s->s.startsWith("j")).collect(Collectors.toList());
+        //names2.forEach(System.out::println);
+        
+        //請將j開頭的名字篩選出來並轉換成字串長度存成List<Integer> names_length並列印出來
+        //List<Integer> names_length =names.stream().filter(s->s.startsWith("j")).mapToInt(s->s.length()).boxed().collect(Collectors.toList());
+        //names_length.forEach(System.out::println);
+        
+        //Integer List filter collect map max average
+        //List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7);
+        //numbers.forEach(System.out::println);
+        List<Integer> numbers = IntStream.rangeClosed(1, 10).boxed().collect(Collectors.toList());
+        double avg = numbers.stream().mapToInt(Integer::intValue).average().getAsDouble();
+        //System.out.println(avg);
+        int sum = numbers.stream().mapToInt(s->s.intValue()).sum();
+        //System.out.println(sum);
+        int max = numbers.stream().mapToInt(s->s.intValue()).max().getAsInt();
+        //System.out.println(max);
+        int min = IntStream.rangeClosed(1, 10).min().getAsInt();
+        //System.out.println(max);
+        List<Integer> numbers2 = Arrays.asList(3,4,5,1,2);
+        //numbers2.stream().sorted().forEach(System.out::println);
+        numbers2.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+        
+        //Object List 
+        List<Stock> stocks = new ArrayList<>();
+        stocks.add(new Stock("2330","台積電","電子",7533,240.5));
+        stocks.add(new Stock("2317","鴻海","電子",6123,240.5));
+        stocks.add(new Stock("2890","永豐金","金融",3012,11.05));
+        stocks.add(new Stock("2885","元大金","金融",3000,14.01));
+        stocks.add(new Stock("1301","台塑","傳產",4500,106));
+        stocks.add(new Stock("1707","葡萄王","傳產",3000,239.0));
+        
+        double max_electronic = stocks.stream().filter(s->s.getType().equals("電子")).map(s->s.getPrice()).max().getAsDouble();
+    }
+}
