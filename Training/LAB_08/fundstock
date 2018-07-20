@@ -1,0 +1,60 @@
+public class Stock {
+    private String stkCode;
+    private String stkName;
+    private Double mktValue;
+
+    public Stock(String stkCode, String stkName, Double mktValue) {
+        this.stkCode = stkCode;
+        this.stkName = stkName;
+        this.mktValue = mktValue;
+    }
+    
+    public String getStkCode() {
+        return stkCode;
+    }
+
+    public String getStkName() {
+        return stkName;
+    }
+
+    public Double getMktValue() {
+        return mktValue;
+    }
+    
+    
+}
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Fund {
+    private String fundName;
+    private Set<Stock> protfolio; 
+
+    public Fund(String fundName) {
+        this.fundName = fundName;
+        this.protfolio = new HashSet();
+    }
+    
+     public void addStock(Stock stock) {
+        this.protfolio.add(stock);
+    }
+
+    public String getFundName() {
+        return fundName;
+    }
+
+    public void setFundName(String fundName) {
+        this.fundName = fundName;
+    }
+
+    public Set<Stock> getProtfolio() {
+        return protfolio;
+    }
+
+    public void setProtfolio(Set<Stock> protfolio) {
+        this.protfolio = protfolio;
+    }
+    
+}
+
