@@ -71,5 +71,8 @@ public class StreamSupply{
                                         return c;
                                       }).average().getAsDouble();
         System.out.println("avg : " +avg);
+        //也可以使用三元運算子
+        double sum2 = IntStream.of(scores).mapToDouble(s->s<60?s*1.1:s).sum();
+        double avg2 = IntStream.of(scores).mapToDouble(s->s<60?s*1.1:s).average().getAsDouble();
     }
 }
