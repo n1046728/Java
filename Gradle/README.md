@@ -1,4 +1,4 @@
-Gradle
-============
-[installation](./notebook/01.md)
-------------
+Gradle NoteBook
+-----------
+* [installation](./notebook/01.md)
+
