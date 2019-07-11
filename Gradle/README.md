@@ -1,3 +1,4 @@
 Gradle
 =======
-* install
+[installation](01.md)
+------------
