@@ -1,4 +1,4 @@
 Gradle
-=======
-[installation](01.md)
+============
+[installation](./notebook/01.md)
 ------------
