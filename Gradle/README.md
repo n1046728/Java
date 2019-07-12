@@ -1,5 +1,5 @@
 Gradle NoteBook
 ================
-* [installation](./notebook/01.md)
-
+* [Installation](./notebook/01.md)
+* [Groovy](./notebook/02.md)
 
