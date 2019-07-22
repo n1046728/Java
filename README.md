@@ -1,4 +1,4 @@
 # Java
-* [Java SE](./Java+SE/README.md)  
+* [Java SE](./Java%20SE/README.md)  
 * [Gradle](./Gradle/README.md)  
 
