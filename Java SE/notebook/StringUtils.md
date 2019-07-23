@@ -1,10 +1,11 @@
-* ***isEmpty(CharSequence cs) and isBlank(CharSequence cs)***
-isEmpty(CharSequence cs)  
+* ***isEmpty(CharSequence cs) and isBlank(CharSequence cs)***  
+1. isEmpty(CharSequence cs)  
 Checks if a CharSequence is empty ("") or null.  
-
-isBlank(CharSequence cs)  
+  
+2. isBlank(CharSequence cs)  
 Checks if a CharSequence is empty (""), null or whitespace only.  
-
+3. API  
+https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html
 ```java
   //isBlank()
   boolean a = StringUtils.isBlank("");//true
