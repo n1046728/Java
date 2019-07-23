@@ -9,16 +9,16 @@ https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/
 ```java
   //isBlank()
   boolean a = StringUtils.isBlank("");//true
-	boolean b = StringUtils.isBlank("  ");//true
+  boolean b = StringUtils.isBlank("  ");//true
   boolean c = StringUtils.isBlank(null);//true
-	boolean d = StringUtils.isBlank("james");//false
+  boolean d = StringUtils.isBlank("james");//false
   System.out.println(a+" "+b+" "+c+" "+d);
   
   //isEmpty()
   boolean a = StringUtils.isEmpty("");//true
-	boolean b = StringUtils.isEmpty("  ");//false
-	boolean c = StringUtils.isEmpty(null);//true
+  boolean b = StringUtils.isEmpty("  ");//false
+  boolean c = StringUtils.isEmpty(null);//true
   boolean d = StringUtils.isEmpty("james");//false
-	System.out.println(a+" "+b+" "+c+" "+d);
+  System.out.println(a+" "+b+" "+c+" "+d);
   
 ```
