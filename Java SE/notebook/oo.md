@@ -3,11 +3,11 @@ Object-Oriented Programming,OOP
 1.**封裝(Encapsulation)**
 ---
 * 根據類別成員的特性分成private、預設、protected、public等四個等級，亦及存取類別成員的權限限制。  
-* 繼承主要目的為提高軟體重複使用性。
 
 2.**繼承(Inheritance)**
 ---
 * 建立類別時，修改、添加或繼承限有類別的定義。
+* 繼承主要目的為提高軟體重複使用性。
 
 3.**多型(Polymorphism)**
 ---
