@@ -7,3 +7,14 @@ ViewBag is a dynamic object, which means you can put whatever you want in to it;
 Tutorial
 ---
 https://dotblogs.com.tw/mis2000lab/2016/03/09/aspnet_mvc_tutorial
+
+C#
+---
+* Anonymous Type  
+https://www.tutorialsteacher.com/csharp/csharp-anonymous-type
+
+* Dynamic Type  
+https://www.tutorialsteacher.com/csharp/csharp-dynamic-type
+
+* Partial Class
+https://www.tutorialsteacher.com/csharp/csharp-partial-class
