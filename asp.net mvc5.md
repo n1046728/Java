@@ -18,3 +18,13 @@ https://www.tutorialsteacher.com/csharp/csharp-dynamic-type
 
 * Partial Class
 https://www.tutorialsteacher.com/csharp/csharp-partial-class
+
+* Indexer  
+https://www.tutorialsteacher.com/csharp/csharp-indexer
+
+* Tuple  
+https://www.tutorialsteacher.com/csharp/csharp-tuple
+
+* shortcut  
+  * code snippet  
+  Ctrl + K,S
