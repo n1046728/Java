@@ -3,6 +3,7 @@ Table of Contents
 * [ER Model](#ER%20Model)
 * [Transaction](#Transaction)
 * [Tutorial](https://www.tutorialspoint.com/dbms/er_model_basic_concepts.htm)
+* [NoSQL](#NoSQL)
 
 ## ER Model
 #### Concepts
@@ -29,4 +30,27 @@ https://www.tutorialspoint.com/dbms/er_diagram_representation.htm
 #### 交易隔離等級 Isolation Level
 
 #### 資料鎖定 Lock
+
+## NoSQL
+* Key-Value Database  
+  - 特性：採用Key-Value資料架構建立分散式的資料庫，具有水平擴充性。  
+  - 用途：可用來儲存設群網路或設教遊戲產生的TB或PB等級資料。  
+  - 常見產品：Google BigTable、Hadoop HBase  
+ 
+* In-memory Database  
+  * 特性：利用記憶體建立分散式資料庫，來加快讀取資料的速度
+  * 用途：適合用來作為網站快取，加速玩家取得由細資訊的速度
+  * 常見產品：Redis  
+
+* Document Database  
+  - 特性：可儲存結構鬆散或非結構性的資料。  
+  - 用途：適合用來儲存網頁資料或各種XML格式的資料，也可存圖片或影音資料。  
+  - 常見產品：MongoDB
+
+* Graph Database  
+  - 特性：運用圖學架構來儲存節點間關係資料架構，基本的資料結構包括節點、關係和屬性。
+  - 用途：可用樹狀結構來記錄社交網站的朋友關係，或用來儲存地圖上每一點和鄰近點的關係，可計算點語點之間最短距離或計算出人與人之間最短交友距離。
+  - 常見產品：Neo4j
+ 
+* reference：https://www.ithome.com.tw/news/92507
 
