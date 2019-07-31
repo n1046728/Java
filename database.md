@@ -34,12 +34,12 @@ https://www.tutorialspoint.com/dbms/er_diagram_representation.htm
 ## NoSQL
 * Key-Value Database  
   - 特性：採用Key-Value資料架構建立分散式的資料庫，具有水平擴充性。  
-  - 用途：可用來儲存設群網路或設教遊戲產生的TB或PB等級資料。  
+  - 用途：可用來儲存設群網路或設社交戲產生的TB或PB等級資料。  
   - 常見產品：Google BigTable、Hadoop HBase  
  
 * In-memory Database  
   * 特性：利用記憶體建立分散式資料庫，來加快讀取資料的速度
-  * 用途：適合用來作為網站快取，加速玩家取得由細資訊的速度
+  * 用途：適合用來作為網站快取，加速玩家取得遊戲資訊的速度
   * 常見產品：Redis  
 
 * Document Database  
