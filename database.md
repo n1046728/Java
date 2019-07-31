@@ -1,11 +1,19 @@
 Table of Contents
 ===
+* [ER Model](#ER%20Model)
 * [Transaction](#Transaction)
+* [Tutorial](https://www.tutorialspoint.com/dbms/er_model_basic_concepts.htm)
 
-### Transaction
+## ER Model
+#### Concepts
+https://www.tutorialspoint.com/dbms/er_model_basic_concepts.htm
 
-ACID Properties
----
+#### ER Diagram Representation
+https://www.tutorialspoint.com/dbms/er_diagram_representation.htm
+ 
+## Transaction
+#### ACID Properties
+
 * 單元性 Atomicity  
 整個交易的敘述視為一個執行單元，要就全部成功，不然就全部取消。
 
@@ -18,8 +26,7 @@ ACID Properties
 * 永久性 Durability   
 交易一旦確認後，其所作的資料修改將視為永久性的，無法再用ROLLBACK回復。
 
-交易隔離等級 Isolation level
----
+#### 交易隔離等級 Isolation Level
 
-資料鎖定 Lock
----
+#### 資料鎖定 Lock
+
