@@ -25,6 +25,11 @@ https://www.tutorialsteacher.com/csharp/csharp-indexer
 * Tuple  
 https://www.tutorialsteacher.com/csharp/csharp-tuple
 
+* ValueTuple
+https://www.tutorialsteacher.com/csharp/valuetuple
+
+
+
 * shortcut  
   * code snippet  
   Ctrl + K,S
