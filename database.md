@@ -1,9 +1,21 @@
 Table of Contents
 ===
+* [Data Integrity](Data%20Integrity)
 * [ER Model](#ER%20Model)
 * [Transaction](#Transaction)
 * [Tutorial](https://www.tutorialspoint.com/dbms/er_model_basic_concepts.htm)
-* [NoSQL](#NoSQL)
+* [NoSQL](#NoSQL)  
+
+## 資料完整性 Data Integrity
+確保資料的正確性與可靠性。  
+#### 實體完整性Entity Integrity  
+確保資料表中的記錄是**唯一**的，我們設定PK就是為了達成實體完整性。  
+#### 區域完整性 Domain Integrity  
+確保資料在允許範圍中。  
+#### 參考完整性 Referential Integrity  
+確保相關聯資料表間的資料一致，避免一個資料表的記錄改變時，造成另一個資料表的內容變成無效值。  
+#### 使用者定義的完整性 User-Defined Integrity  
+由使用者自行定義的，例如客戶欠款超過六個月，下次他再下訂單就不賣給他。
 
 ## ER Model
 #### Concepts
