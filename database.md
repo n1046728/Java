@@ -1,6 +1,6 @@
 Table of Contents
 ===
-* [Data Integrity](Data%20Integrity)
+* [Data Integrity](#資料完整性-data-integrity)
 * [ER Model](#er-model)
 * [Transaction](#Transaction)
 * [Tutorial](https://www.tutorialspoint.com/dbms/er_model_basic_concepts.htm)
