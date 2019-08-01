@@ -1,7 +1,7 @@
 Table of Contents
 ===
 * [Data Integrity](Data%20Integrity)
-* [ER Model](#ER%20Model)
+* [ER Model](#er-model)
 * [Transaction](#Transaction)
 * [Tutorial](https://www.tutorialspoint.com/dbms/er_model_basic_concepts.htm)
 * [NoSQL](#NoSQL)  
