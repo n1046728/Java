@@ -25,10 +25,11 @@ https://www.tutorialsteacher.com/csharp/csharp-indexer
 * Tuple  
 https://www.tutorialsteacher.com/csharp/csharp-tuple
 
-* ValueTuple
-https://www.tutorialsteacher.com/csharp/valuetuple
+* ValueTuple  
+https://www.tutorialsteacher.com/csharp/valuetuple  
 
-
+* Delegate  
+https://www.tutorialsteacher.com/csharp/csharp-delegates
 
 * shortcut  
   * code snippet  
