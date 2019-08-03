@@ -1,6 +1,7 @@
 Table of Contents
 ===
 * [Data Integrity](#資料完整性-data-integrity)
+* [Normalization](#Normalization)
 * [ER Model](#er-model)
 * [Transaction](#Transaction)
 * [Tutorial](https://www.tutorialspoint.com/dbms/er_model_basic_concepts.htm)
@@ -23,7 +24,39 @@ https://www.tutorialspoint.com/dbms/er_model_basic_concepts.htm
 
 #### ER Diagram Representation
 https://www.tutorialspoint.com/dbms/er_diagram_representation.htm
- 
+
+## Normalization
+#### purpose  
+  * Reduce Data Redundancy  
+  * Remove Insert,Update,Delete Anomily  
+  
+#### Terminology  
+  * Function Dependence ,FD  
+   Table R ,AttributeX,Y,Z ,so R={X,Y,Z}  
+   X→Y, where X functionally determines Y. The left-hand side attributes determine the values of attributes on the right-hand side.  
+   
+   * Partial Functional Dependency  
+     (X,Y)→Z，若移除任一X，Y屬性(X,Y)→Z仍存在，此時稱Z部分功能相依於(X,Z)  
+     ex. (學號,姓名)→姓名  
+   
+   * Transitive Dependency  
+   X→Y,Y→Z 則 X→Z 則稱Z遞移相依於X  
+    ex.課程代號決定老師編號，老師編號決定老師姓名  
+    
+#### Normalization正規化
+  * First Normal Form,1NF  
+  符合1NF，且資料表中的所有紀錄之屬性內含都是基元值(Atomic Value)  
+  
+  * Second Normal Form,2NF  
+  每一非鍵屬性必須完全相依於主鍵。  
+  ex.學號決定姓名、性別  
+  
+  *  Third Normal Form  
+  符合2NF，且各欄位與主見沒有遞移相依的關係
+  
+  * BCNF  
+  符合3NF，若主鍵為單一欄位組成則符合BCNF，若為複合主鍵和主鍵中的欄位不可相依於其它欄位  
+     
 ## Transaction
 #### ACID Properties
 
@@ -64,5 +97,6 @@ https://www.tutorialspoint.com/dbms/er_diagram_representation.htm
   - 用途：可用樹狀結構來記錄社交網站的朋友關係，或用來儲存地圖上每一點和鄰近點的關係，可計算點語點之間最短距離或計算出人與人之間最短交友距離。
   - 常見產品：Neo4j
  
+* reference：https://www.ithome.com.tw/news/92506
 * reference：https://www.ithome.com.tw/news/92507
 
