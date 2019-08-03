@@ -35,9 +35,13 @@ https://www.tutorialspoint.com/dbms/er_diagram_representation.htm
    Table R ,AttributeX,Y,Z ,so R={X,Y,Z}  
    X→Y, where X functionally determines Y. The left-hand side attributes determine the values of attributes on the right-hand side.  
    
+   * Full Functional Dependency  
+    (X,Y)→Z，若移除任一X，Y屬性時 (X,Y)→Z**不**存在，此時稱Z完全功能相依於(X,Z)  
+     ex. (學號,課號)→ 成績 
+   
    * Partial Functional Dependency  
-     (X,Y)→Z，若移除任一X，Y屬性(X,Y)→Z仍存在，此時稱Z部分功能相依於(X,Z)  
-     ex. (學號,姓名)→姓名  
+     (X,Y)→Z，若移除任一X，Y屬性時 (X,Y)→Z**仍**存在，此時稱Z部分功能相依於(X,Z)  
+     ex. (學號,身分證字號)→姓名  
    
    * Transitive Dependency  
    X→Y,Y→Z 則 X→Z 則稱Z遞移相依於X  
