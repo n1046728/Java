@@ -28,8 +28,24 @@ https://www.tutorialsteacher.com/csharp/csharp-tuple
 * ValueTuple  
 https://www.tutorialsteacher.com/csharp/valuetuple  
 
-* Delegate  
-https://www.tutorialsteacher.com/csharp/csharp-delegates
+* Delegates  
+https://www.tutorialsteacher.com/csharp/csharp-delegates  
+  * Func  
+  https://www.tutorialsteacher.com/csharp/csharp-func-delegate
+  * Action  
+  https://www.tutorialsteacher.com/csharp/csharp-action-delegate  
+  * Predicate  
+  https://www.tutorialsteacher.com/csharp/csharp-predicate  
+
+* Event  
+https://www.tutorialsteacher.com/csharp/csharp-event  
+
+* Covariance  
+https://www.tutorialsteacher.com/csharp/csharp-covariance-and-contravariance
+
+* Extension Method  
+https://www.tutorialsteacher.com/csharp/csharp-extension-method  
+
 
 * shortcut  
   * code snippet  
