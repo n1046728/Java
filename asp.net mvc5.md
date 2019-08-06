@@ -46,6 +46,9 @@ https://www.tutorialsteacher.com/csharp/csharp-covariance-and-contravariance
 * Extension Method  
 https://www.tutorialsteacher.com/csharp/csharp-extension-method  
 
+* Object Initiliazer  
+https://www.tutorialsteacher.com/csharp/csharp-object-initializer
+
 
 * shortcut  
   * code snippet  
