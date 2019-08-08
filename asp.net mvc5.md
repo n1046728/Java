@@ -53,3 +53,8 @@ https://www.tutorialsteacher.com/csharp/csharp-object-initializer
 * shortcut  
   * code snippet  
   Ctrl + K,S
+  * prop tab tab
+  
+  Entity Framework
+  ---
+  https://www.entityframeworktutorial.net/
