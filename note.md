@@ -20,7 +20,9 @@ https://www.books.com.tw/products/0010667646
 http://tprc.tanet.edu.tw/tpnet2018/training/10702.pdf
 
 6. java 效能調校  
-http://www.51gjie.com/java/552.html
+http://www.51gjie.com/java/552.html  
+https://blog.csdn.net/Yano_nankai/article/details/50957578  
+深入理解Java虚拟机：JVM高级特性与最佳实践（第2版）
 
 
 
