@@ -23,6 +23,7 @@ http://tprc.tanet.edu.tw/tpnet2018/training/10702.pdf
 http://www.51gjie.com/java/552.html  
 https://blog.csdn.net/Yano_nankai/article/details/50957578  
 深入理解Java虚拟机：JVM高级特性与最佳实践（第2版）
+Java效能優化指南 / Charlie Hunt, Binu John[作] ; 陳逸嘉譯 漢特 (Hunt, Charlie)  
 
 
 
