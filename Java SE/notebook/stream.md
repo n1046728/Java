@@ -13,3 +13,23 @@ The findFirst() method finds the first element in a Stream. Obviously, this meth
   System.out.println(num1);// 1 or 3 or 5 or 10
   System.out.println(num2);// 1
 ```
+
+3. boolean allMatch(Predicate<? super T> predicate)  
+   Returns whether all elements of this stream match the provided predicate.  
+
+4. anyMatch(Predicate<? super T> predicate)  
+   Returns whether any elements of this stream match the provided predicate.
+
+5. noneMatch(Predicate<? super T> predicate)  
+   Returns whether no elements of this stream match the provided predicate.  
+   
+```java
+ List<String> arr = Arrays.asList("b","b","b","b","a");
+ boolean a = arr.stream().anyMatch(s->s.equals("a"));
+ boolean b = arr.stream().allMatch(s->s.equals("b"));
+ boolean c = arr.stream().noneMatch(s->s.equals("c"));
+ 
+ System.out.println(a);//true
+ System.out.println(b);//false
+ System.out.println(c);//true
+```
