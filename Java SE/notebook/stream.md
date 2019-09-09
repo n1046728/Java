@@ -1,3 +1,7 @@
+* Predicate謂詞  
+  返回boolean的函數  
+  
+
 1. findAny()  
 As the name suggests, the findAny() method allows you to find any element from a Stream. **In a non-parallel operation, it will most likely return the first element in the Stream but there is no guarantee for this.**
 For maximum performance when processing the parallel operation the result cannot be reliably determined.
