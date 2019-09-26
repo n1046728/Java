@@ -1,3 +1,10 @@
+RadioGroup
+----------
+<radiogroup selectedItem="@bind(vm.selected)">
+    <radio label="apple"  value="123" style="font-size:16px;"></radio>
+    <radio label="banna" value="456" style="font-size:16px;"></radio>
+</radiogroup>
+
 Problem with 'NotifyChange' and 'Messagebox'?@NotifyChange does not work
 -------------------------------------------------------------------------
 #### Description：see author zhvihti as below
