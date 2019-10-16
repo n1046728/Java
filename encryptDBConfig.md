@@ -43,4 +43,15 @@ java -cp jasypt-1.9.3.jar org.jasypt.intf.cli.JasyptPBEStringDecryptionCLI input
   
   Encrypting JDBC config
   ---
-  [reference](https://www.jdev.it/encrypting-passwords-in-tomcat/)
+  [reference](https://www.jdev.it/encrypting-passwords-in-tomcat/)  
+ * 步驟
+  1. use Encryptor.java to encrypt password
+  2. setting context.xml  
+  ```xml
+  <Resource name="jdbc/SRSDB"
+          factory="EncryptedDataSourceFactory"
+          ...
+          password="82ea2bfa446b2cfsadfsdfdd83fadsfac0c7c4c"
+          ...
+   />
+  ```
