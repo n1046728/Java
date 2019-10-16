@@ -41,7 +41,7 @@ java -cp jasypt-1.9.3.jar org.jasypt.intf.cli.JasyptPBEStringDecryptionCLI input
   
   
   
-  Encrypting JDBC config
+  Encrypt JDBC config
   ---
   [reference](https://www.jdev.it/encrypting-passwords-in-tomcat/)  
  * 步驟
