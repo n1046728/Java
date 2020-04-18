@@ -7,6 +7,7 @@ Setting
 * Windows->Preference->General->Appearance->Colors and Fonts->Dialog Font->Consolas 10  
 * Windows->Preference->General->Appearance->Theme->Dark  
 * Windows->Preference->General->WebBrowser>Chrome  
+* Window->Preferences->Java>Editor->Content Assist->Auto Activation Trigger for java ->.abcdefghijklmnopqrstuvwxyz
 * Windows->Preference->->Server->Runtime->Add->select Tomcat version ->Browser C:\apache-tomcat-9.0.21  
 
 [Where is Eclipse deploy web application–Tomcat](https://www.mkyong.com/eclipse/where-is-eclipse-deploy-web-application-tomcat/)
