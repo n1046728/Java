@@ -2,7 +2,10 @@ Eclipse
 ===
 Setting
 ---
-* Windows->Preference->General->Workspace->Text file encoding->utf8  
+* Windows->Preference->General->Workspace->Text file encoding->utf8
+* Windows->Preference->General->Web->CSS files ->Encoding->utf8
+* Windows->Preference->General->Web->HTML files ->Encoding->utf8
+* Windows->Preference->General->Web->JSP files ->Encoding->utf8
 * Windows->Preference->General->Appearance->Colors and Fonts->Text Font->Consolas 14  
 * Windows->Preference->General->Appearance->Colors and Fonts->Dialog Font->Consolas 10  
 * Windows->Preference->General->Appearance->Theme->Dark  
