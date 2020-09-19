@@ -19,6 +19,7 @@ Setting
 ex. C:\your_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp2\wtpwebapps
 
 [Dynamic Web Project not picking up changes in jsp or java code](https://stackoverflow.com/questions/6179621/eclipse-dynamic-web-project-not-picking-up-changes-in-jsp-or)
+---
 * Project -> BuildAutomatically
 * Server -> Publishing -> check Automatically publish when resource change
 * if only jsp/js not change , try clearing out your cache on browser
