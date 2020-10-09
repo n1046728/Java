@@ -13,6 +13,11 @@ Setting
 * Window->Preferences->Java>Editor->Content Assist->Auto Activation Trigger for java ->.abcdefghijklmnopqrstuvwxyz
 * Windows->Preference->->Server->Runtime->Add->select Tomcat version ->Browser C:\apache-tomcat-9.0.21  
 
+Shortcut
+---
+* To generate getters and setters > Alt+Shift+S, R
+* Add unimplemented method when implements xxx > Ctrl + . then Ctrl 1 
+
 [Where is Eclipse deploy web application–Tomcat](https://www.mkyong.com/eclipse/where-is-eclipse-deploy-web-application-tomcat/)
 ---
 * double click tomcat server->Open launch configuration->Arguments->see VM arguments:  
